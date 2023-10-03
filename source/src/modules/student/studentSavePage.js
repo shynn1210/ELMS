@@ -66,7 +66,8 @@ const StudentSavePage = () => {
         immediate: false,
         mappingData: ({ data }) => data.data.map((item) => ({ value: item.id, label: item.categoryName })),
     });
-
+     
+    // TODO:
     useEffect(() => {
         executeGetCategories({
             params: {
