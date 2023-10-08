@@ -355,4 +355,10 @@ export const formSize = {
 };
 export const categoryKind = {
     news: 1,
+    studyClasses: 2,
+};
+
+export const lectureKind = {
+    chap: 1,
+    lesson: 2,
 };

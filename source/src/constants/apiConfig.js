@@ -206,6 +206,203 @@ const apiConfig = {
             isRequiredTenantId: true,
         },
     },
+
+    leader: {
+        getList: {
+            baseURL: `${apiTenantUrl}v1/leader/list`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        autocomplete: {
+            baseURL: `${apiTenantUrl}v1/leader/auto-complete`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        getById: {
+            baseURL: `${apiTenantUrl}v1/leader/get/:id`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        create: {
+            baseURL: `${apiTenantUrl}v1/leader/create`,
+            method: `POST`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        update: {
+            baseURL: `${apiTenantUrl}v1/leader/update`,
+            method: `PUT`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        delete: {
+            baseURL: `${apiTenantUrl}v1/leader/delete/:id`,
+            method: `DELETE`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+    },
+    course: {
+        getList: {
+            baseURL: `${apiTenantUrl}v1/course/list`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        autocomplete: {
+            baseURL: `${apiTenantUrl}v1/course/auto-complete`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        getById: {
+            baseURL: `${apiTenantUrl}v1/course/get/:id`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        create: {
+            baseURL: `${apiTenantUrl}v1/course/create`,
+            method: `POST`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        update: {
+            baseURL: `${apiTenantUrl}v1/course/update`,
+            method: `PUT`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        delete: {
+            baseURL: `${apiTenantUrl}v1/course/delete/:id`,
+            method: `DELETE`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        registratedStudent: {
+            baseURL: `${apiTenantUrl}v1/course/list_students`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+    },
+    subject: {
+        getList: {
+            baseURL: `${apiTenantUrl}v1/subject/list`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        autocomplete: {
+            baseURL: `${apiTenantUrl}v1/subject/auto-complete`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        getById: {
+            baseURL: `${apiTenantUrl}v1/subject/get/:id`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        create: {
+            baseURL: `${apiTenantUrl}v1/subject/create`,
+            method: `POST`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        update: {
+            baseURL: `${apiTenantUrl}v1/subject/update`,
+            method: `PUT`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        delete: {
+            baseURL: `${apiTenantUrl}v1/subject/delete/:id`,
+            method: `DELETE`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+    },
+    lecture: {
+        getList: {
+            baseURL: `${apiTenantUrl}v1/lecture/list`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        autocomplete: {
+            baseURL: `${apiTenantUrl}v1/lecture/auto-complete`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        getById: {
+            baseURL: `${apiTenantUrl}v1/lecture/get/:id`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        create: {
+            baseURL: `${apiTenantUrl}v1/lecture/create`,
+            method: `POST`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        update: {
+            baseURL: `${apiTenantUrl}v1/lecture/update`,
+            method: `PUT`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        delete: {
+            baseURL: `${apiTenantUrl}v1/lecture/delete/:id`,
+            method: `DELETE`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+    },
+    registration: {
+        getList: {
+            baseURL: `${apiTenantUrl}v1/registration/list`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        autocomplete: {
+            baseURL: `${apiTenantUrl}v1/registration/auto-complete`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        getById: {
+            baseURL: `${apiTenantUrl}v1/registration/get/:id`,
+            method: `GET`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        create: {
+            baseURL: `${apiTenantUrl}v1/registration/create`,
+            method: `POST`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        update: {
+            baseURL: `${apiTenantUrl}v1/registration/update`,
+            method: `PUT`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+        delete: {
+            baseURL: `${apiTenantUrl}v1/registration/delete/:id`,
+            method: `DELETE`,
+            headers: baseHeader,
+            isRequiredTenantId: true,
+        },
+    },
 };
 
 export default apiConfig;

@@ -178,12 +178,18 @@ export const serviceKinds = [
     { value: KIND_SERVICE_COMBO, label: 'Combo' },
 ];
 
-export const FREE_STATE = 0;
-export const BUSY_STATE = 1;
+export const FREE_STATE = 1;
+export const START_STATE = 2;
+export const END_STATE = 3;
+export const CANCEL_STATE = 4;
+export const OPEN_STATE = 5;
 
 export const stateOptions = [
-    { label: 'Rảnh', value: FREE_STATE, color: '#00A648' },
-    { label: 'Bận', value: BUSY_STATE, color: '#FFBF00' },
+    { label: 'Chưa bắt đầu', value: FREE_STATE, color: 'green' },
+    { label: 'Đã bắt đầu', value: START_STATE, color: 'yellow' },
+    { label: 'Đã kết thúc', value: END_STATE, color: 'orange' },
+    { label: 'Chưa mở', value: CANCEL_STATE, color: 'red' },
+    { label: 'Chiêu sinh', value: OPEN_STATE, color: 'blue' },
 ];
 
 export const HALF = 0;
@@ -226,4 +232,25 @@ export const dateFilterOptions = [
     { value: 2, label: dateFilterMessage.thisMonth },
     { value: 3, label: dateFilterMessage.lastMonth },
     { value: 4, label: dateFilterMessage.custom },
+];
+
+export const CHAP = 1;
+export const LESSON = 2;
+
+export const lectureOptions = [
+    { label: 'Chương', value: CHAP },
+    { label: 'Bài', value: LESSON },
+];
+
+export const NO = 0;
+export const YES = 1;
+
+export const internOptions = [
+    { label: 'Không', value: NO },
+    { label: 'Có', value: YES },
+];
+
+export const issuedCertifyOptions = [
+    { label: 'Chưa đăng kí', value: NO, color: 'red' },
+    { label: 'Đăng kí', value: YES, color: 'green' },
 ];

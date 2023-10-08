@@ -1,6 +1,11 @@
 import PageNotFound from '@components/common/page/PageNotFound';
 import categoryRoutes from '@modules/category/routes';
 import studentRoutes from '@modules/student/routes';
+import leaderRoutes from '@modules/leader/routes';
+import courseRoutes from '@modules/course/routes';
+import subjectRoutes from '@modules/subject/routes';
+import lectureRoutes from '@modules/lecture/routes';
+import registrationRoutes from '@modules/registration/routes';
 import Dashboard from '@modules/dashboard';
 import LoginPage from '@modules/login/index';
 import ProfilePage from '@modules/profile/index';
@@ -44,8 +49,13 @@ const routes = {
     },
     ...categoryRoutes,
     ...studentRoutes,
+    ...leaderRoutes, 
+    ...subjectRoutes,
+    ...courseRoutes,
+    ...lectureRoutes,
+    ...registrationRoutes,
     // keep this at last
-    //
+    
     notFound: {
         component: PageNotFound,
         auth: null,

@@ -4,7 +4,6 @@ import useFetch from '@hooks/useFetch';
 import { categoryKind } from '@constants';
 import { STATUS_ACTIVE, UserTypes, DATE_FORMAT_VALUE, DEFAULT_TIME } from '@constants';
 import PageWrapper from '@components/common/layout/PageWrapper';
-import StudentForm from './studentForm';
 import apiConfig from '@constants/apiConfig';
 import useTranslate from '@hooks/useTranslate';
 import useSaveBase from '@hooks/useSaveBase';
@@ -12,23 +11,24 @@ import { useParams } from 'react-router-dom';
 import { defineMessages } from 'react-intl';
 import { formatDateString } from '@utils';
 import moment from 'moment';
+import LeaderForm from './leaderForm';
 const message = defineMessages({
-    objectName: 'student',
+    objectName: 'leader',
     home: 'Home',
-    student: 'Student',
+    leader: 'Leader',
 });
 
-const StudentSavePage = () => {
+const LeaderSavePage = () => {
     const translate = useTranslate();
     const { id } = useParams();
     const { detail, onSave, mixinFuncs, setIsChangedFormValues, isEditing, errors, loading, title } = useSaveBase({
         apiConfig: {
-            getById: apiConfig.student.getById,
-            create: apiConfig.student.create,
-            update: apiConfig.student.update,
+            getById: apiConfig.leader.getById,
+            create: apiConfig.leader.create,
+            update: apiConfig.leader.update,
         },
         options: {
-            getListUrl: `/student`,
+            getListUrl: `/leader`,
             objectName: translate.formatMessage(message.objectName),
         },
         override: (funcs) => {
@@ -58,49 +58,16 @@ const StudentSavePage = () => {
         },
     });
 
-    const {
-        data: universities,
-        loading: getCategoriesLoading,
-        execute: executeGetCategories,
-    } = useFetch(apiConfig.category.getList, {
-        immediate: false,
-        mappingData: ({ data }) => data.content.map((item) => ({ value: item.id, label: item.categoryName })),
-    });
-    const {
-        data: studyClasses,
-        loading: getClassesLoading,
-        execute: executeGetClass,
-    } = useFetch(apiConfig.category.getList, {
-        immediate: false,
-        mappingData: ({ data }) => data.content.map((item) => ({ value: item.id, label: item.categoryName })),
-    });
-
-    useEffect(() => {
-        executeGetCategories({
-            params: {
-                kind: categoryKind.news,
-            },
-        });
-    }, []);
-    useEffect(() => {
-        executeGetClass({
-            params: {
-                kind: categoryKind.studyClasses,
-            },
-        });
-    }, []);
     return (
         <PageWrapper
             loading={loading}
             routes={[
                 { breadcrumbName: translate.formatMessage(message.home) },
-                { breadcrumbName: translate.formatMessage(message.student), path: routes.studentListPage.path },
+                { breadcrumbName: translate.formatMessage(message.leader), path: routes.leaderListPage.path },
                 { breadcrumbName: title },
             ]}
         >
-            <StudentForm
-                universities={universities}
-                studyClasses={studyClasses}
+            <LeaderForm
                 formId={mixinFuncs.getFormId()}
                 actions={mixinFuncs.renderActions()}
                 dataDetail={detail ? detail : {}}
@@ -112,4 +79,4 @@ const StudentSavePage = () => {
         </PageWrapper>
     );
 };
-export default StudentSavePage;
+export default LeaderSavePage;
